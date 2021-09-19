@@ -1,0 +1,97 @@
+.App {
+  font-family: sans-serif;
+}
+
+.heading {
+  font-family: sans-serif;
+  background-color: gainsboro;
+  padding: 7px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 100;
+  width: 100%;
+  font-weight: bold;
+  font-size: medium;
+  margin: auto;
+}
+
+.add-friend-bar {
+  font-family: sans-serif;
+  padding: 5px;
+  font-size: small;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 35px;
+  width: 100%;
+  border-block-end-color: black;
+}
+
+.friend-list {
+  position: absolute;
+  top: 65px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.friend-list .friend {
+  background-color: ghostwhite;
+  display: flex;
+  height: 2rem;
+  margin: 4px;
+  border-radius: 5px;
+  display: flex;
+  padding: 1em;
+}
+
+.friend-list .friend .star {
+  cursor: pointer;
+  padding: 2px;
+  border: 1px solid gainsboro;
+  margin-left: auto;
+  order: 1;
+}
+
+.friend-list .friend .trash {
+  cursor: pointer;
+  padding: 3px;
+  border: 1px solid gainsboro;
+  order: 2;
+}
+
+.pagination div {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination div.active {
+  background-color: gainsboro;
+  border-radius: 5px;
+}
+
+.pagination div:hover:not(.active) {
+  background-color: #ddd;
+  border-radius: 5px;
+}
+
+.friend-text {
+  flex-direction: column;
+  padding: 2px;
+}
+
+.friend-name {
+  margin: auto;
+  font-size: large;
+}
+
+.your-friend {
+  font-size: small;
+  color: gray;
+}
