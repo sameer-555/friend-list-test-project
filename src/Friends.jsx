@@ -1,7 +1,7 @@
 import "./styles.css";
-import { ReactComponent as EmptyStar } from "../assets/bx-star.svg";
-import { ReactComponent as TrashBin } from "../assets/bx-trash.svg";
-import { ReactComponent as FilledStarr } from "../assets/bx-filledstar.svg";
+import { ReactComponent as EmptyStar } from "./assets/bx-star.svg";
+import { ReactComponent as TrashBin } from "./assets/bx-trash.svg";
+import { ReactComponent as FilledStarr } from "./assets/bx-filledstar.svg";
 import { confirm } from "react-confirm-box";
 
 const FriendsList = ({ friends, clickFav, clickDelete }) => {
