@@ -93,13 +93,16 @@ export default function App() {
           clickFav={favFriend}
           clickDelete={deleteFriend}
         />
-
-        <Pagination
-          friendsPerPage={friendsPerPage}
-          totalFriends={friendList.length}
-          currentData={friendsData.length}
-          paginate={paginate}
-        />
+        {friendList.length > 0 ? (
+          <Pagination
+            friendsPerPage={friendsPerPage}
+            totalFriends={friendList.length}
+            currentData={friendsData.length}
+            paginate={paginate}
+          />
+        ) : (
+          <div className="no-friends">You have no friends yet.</div>
+        )}
       </div>
     </div>
   );
