@@ -51,7 +51,6 @@ export default function App() {
       //checking special character and number in string
       const noSpecialchar = /[!@#$%^&*()_+\-=\\[\]{};':"\\|,.<>\\/?]+/;
       const noNumber = /\d/;
-      console.log(noSpecialchar.test(name), "---", noNumber.test(name));
       if (noSpecialchar.test(name) || noNumber.test(name)) {
         alert("Please make sure no special characters are used");
         return false;
@@ -78,8 +77,7 @@ export default function App() {
 
   const indexOfLastFriend = currentPage * friendsPerPage;
   const indexOfFirstFriend = indexOfLastFriend - friendsPerPage;
-  let friendsData = [...friendList];
-  friendsData = friendsData.slice(indexOfFirstFriend, indexOfLastFriend);
+  let friendsData = friendList.slice(indexOfFirstFriend, indexOfLastFriend);
 
   const paginate = (number) => {
     setCurrentPage(number);
@@ -95,9 +93,11 @@ export default function App() {
           clickFav={favFriend}
           clickDelete={deleteFriend}
         />
+
         <Pagination
           friendsPerPage={friendsPerPage}
           totalFriends={friendList.length}
+          currentData={friendsData.length}
           paginate={paginate}
         />
       </div>
